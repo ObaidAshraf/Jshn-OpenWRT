@@ -19,7 +19,7 @@ then
 	while json_get_type Type "$idx" && [ "$Type" == string ]	## iterate over data inside "lan" object
 	do
 		json_get_var ip_addr $idx 
-		echo "$mac"
+		echo "$ip_addr"
 		$((idx++)) 2> /dev/null
 	done
 fi
@@ -33,7 +33,7 @@ then
 	while json_get_type Type "$idx" && [ "$Type" == string ]	## iterate over data inside "wan" object
 	do
 		json_get_var ip_addr $idx 
-		echo "$mac"
+		echo "$ip_addr"
 		$((idx++)) 2> /dev/null
 	done
 fi
